@@ -1,4 +1,4 @@
-name: aws_catalog
+name: maxar_catalog_update
 on:
   workflow_dispatch:
   schedule:
