@@ -50,3 +50,11 @@ for index, collection in enumerate(collections):
             images = gdf['visual'].tolist()
             leafmap.create_mosaicjson(images, out_json)
     
+    # Create TSV file for each event
+    files = leafmap.find_files('datasets', ext='geojson')
+    for file in files:
+        out_tsv = file.replace('.geojson', '.tsv')
+        if not os.path.exists(out_tsv):
+            gdf = gpd.read_file(file)
+            df = leafmap.gdf_to_df(gdf)
+            df.to_csv(out_tsv, sep='\t', index=False)
