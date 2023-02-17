@@ -22,15 +22,32 @@ for index, collection in enumerate(collections):
 
     cols = leafmap.maxar_child_collections(collection)
 
+    # Generate individual GeoJSON files for each collection
     for i, col in enumerate(cols):
         print(f"Processing {i+1}/{len(cols)}: {col} ...")
         output = f"datasets/{collection}/{col}.geojson"
         if not os.path.exists(output):
-            gdf = leafmap.maxar_items(collection, col, return_gdf=True, assets=['visual'])
+            gdf = leafmap.maxar_items(
+                collection, col, return_gdf=True, assets=['visual']
+            )
             gdf.to_file(output, driver="GeoJSON")
-                                  
 
-    files = leafmap.find_files(out_dir)
-    gdfs = [gpd.read_file(file) for file in files]
-    merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True)) 
-    merged_gdf.to_file(f"datasets/{collection}.geojson", driver="GeoJSON")
+    # Merge all GeoJSON files into one GeoJSON file
+    merged = f"datasets/{collection}.geojson"
+    if not os.path.exists(merged):
+        files = leafmap.find_files(out_dir)
+        gdfs = [gpd.read_file(file) for file in files]
+        merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True))
+        merged_gdf.to_file(merged, driver="GeoJSON")
+
+    # Create MosaicJSON for each tile
+    if collection == 'Kahramanmaras-turkey-earthquake-23':
+        files = leafmap.find_files(out_dir, ext='geojson')
+        for file in files:
+            out_json = file.replace('.geojson', '.json')
+            if not os.path.exists(out_json):
+                print(f"Processing {file} ...")
+                gdf = gpd.read_file(file)
+                images = gdf['visual'].tolist()
+                leafmap.create_mosaicjson(images, out_json)
+        
