@@ -41,13 +41,12 @@ for index, collection in enumerate(collections):
         merged_gdf.to_file(merged, driver="GeoJSON")
 
     # Create MosaicJSON for each tile
-    if collection == 'Kahramanmaras-turkey-earthquake-23':
-        files = leafmap.find_files(out_dir, ext='geojson')
-        for file in files:
-            out_json = file.replace('.geojson', '.json')
-            if not os.path.exists(out_json):
-                print(f"Processing {file} ...")
-                gdf = gpd.read_file(file)
-                images = gdf['visual'].tolist()
-                leafmap.create_mosaicjson(images, out_json)
-        
+    files = leafmap.find_files(out_dir, ext='geojson')
+    for file in files:
+        out_json = file.replace('.geojson', '.json')
+        if not os.path.exists(out_json):
+            print(f"Processing {file} ...")
+            gdf = gpd.read_file(file)
+            images = gdf['visual'].tolist()
+            leafmap.create_mosaicjson(images, out_json)
+    

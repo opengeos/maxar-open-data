@@ -1,6 +1,6 @@
 # maxar-open-data
 
-The Maxar Open Data STAC Catalog in CSV and MosaicJSON formats
+The Maxar Open Data STAC Catalog in CSV, GeoJSON, and MosaicJSON formats
 
 The [Maxar Open Data Program](https://www.maxar.com/open-data) provides pre- and post-event high-resolution satellite imagery in support of emergency planning, risk assessment, monitoring of staging areas and emergency response, damage assessment, and recovery. Check out the links below for more information.
 
