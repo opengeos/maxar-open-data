@@ -53,7 +53,18 @@ for index, collection in enumerate(collections):
     files = leafmap.find_files('datasets', ext='geojson')
     for file in files:
         out_tsv = file.replace('.geojson', '.tsv')
-        if not os.path.exists(out_tsv):
-            gdf = gpd.read_file(file)
-            df = leafmap.gdf_to_df(gdf)
-            df.to_csv(out_tsv, sep='\t', index=False)
+        gdf = gpd.read_file(file)
+        df = leafmap.gdf_to_df(gdf)
+        df.to_csv(out_tsv, sep='\t', index=False)
+
+# Create a CSV file for all events
+files = leafmap.find_files('datasets', ext='tsv', recursive=False)
+ids = []
+nums = []
+for file in files:
+    df = pd.read_csv(file, sep='\t')
+    ids.append(file.split('/')[1].replace('.tsv', ''))
+    nums.append(len(df))
+df = pd.DataFrame({'dataset': ids, 'count': nums})
+df.to_csv('datasets.csv', index=False)
+    
