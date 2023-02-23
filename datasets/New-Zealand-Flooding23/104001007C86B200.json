@@ -1,1 +1,77 @@
-{"mosaicjson": "0.0.2", "version": "1.0.0", "minzoom": 12, "maxzoom": 19, "quadkey_zoom": 12, "bounds": [174.5338858223178, -36.80116533595798, 174.7639483987786, -36.65874884941431], "center": [174.6489171105482, -36.72995709268615, 12], "tiles": {"311333000001": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif"], "311333000010": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif"], "311333000011": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212310/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif"], "311333000100": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif"], "311333000003": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif"], "311333000012": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif"], "311333000013": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212310/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212312/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif"], "311333000102": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif"], "311333000021": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif"], "311333000030": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212321/2022-11-01/104001007C86B200-visual.tif"], "311333000031": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212312/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212321/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212330/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212331/2022-11-01/104001007C86B200-visual.tif"], "311333000120": ["https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif", "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212331/2022-11-01/104001007C86B200-visual.tif"]}}
+{
+    "mosaicjson": "0.0.2",
+    "version": "1.0.0",
+    "minzoom": 12,
+    "maxzoom": 19,
+    "quadkey_zoom": 12,
+    "bounds": [
+        174.5338858223178,
+        -36.80116533595798,
+        174.7639483987786,
+        -36.65874884941431
+    ],
+    "center": [
+        174.6489171105482,
+        -36.72995709268615,
+        12
+    ],
+    "tiles": {
+        "311333000001": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000010": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000011": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212310/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000100": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000003": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000012": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212300/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000013": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212301/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212310/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212312/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000102": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212311/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000021": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000030": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212302/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212321/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000031": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212303/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212312/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212321/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212330/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212331/2022-11-01/104001007C86B200-visual.tif"
+        ],
+        "311333000120": [
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212313/2022-11-01/104001007C86B200-visual.tif",
+            "https://maxar-opendata.s3.amazonaws.com/events/New-Zealand-Flooding23/ard/60/213311212331/2022-11-01/104001007C86B200-visual.tif"
+        ]
+    }
+}
