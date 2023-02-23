@@ -34,11 +34,11 @@ for index, collection in enumerate(collections):
 
     # Merge all GeoJSON files into one GeoJSON file
     merged = f"datasets/{collection}.geojson"
-    if not os.path.exists(merged):
-        files = leafmap.find_files(out_dir)
-        gdfs = [gpd.read_file(file) for file in files]
-        merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True))
-        merged_gdf.to_file(merged, driver="GeoJSON")
+    # if not os.path.exists(merged):
+    files = leafmap.find_files(out_dir)
+    gdfs = [gpd.read_file(file) for file in files]
+    merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True))
+    merged_gdf.to_file(merged, driver="GeoJSON")
 
     # Create MosaicJSON for each tile
     files = leafmap.find_files(out_dir, ext='geojson')
