@@ -1,4 +1,3 @@
 cogeo-mosaic
 geopandas
-gradio
 leafmap
