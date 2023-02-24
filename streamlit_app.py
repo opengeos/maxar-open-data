@@ -27,7 +27,7 @@ def get_catalogs(name):
 
 st.title('Visualizing Maxar Open Data')
 
-col1, col2 = st.columns([1, 4])
+col1, col2 = st.columns([1.2, 3.8])
 
 with col1:
     default = 'Kahramanmaras-turkey-earthquake-23'
