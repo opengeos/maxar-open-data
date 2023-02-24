@@ -7,6 +7,8 @@ import pandas as pd
 
 collections = leafmap.maxar_collections()
 
+datasets = pd.read_csv('datasets.csv')
+
 for index, collection in enumerate(collections):
     print("*****************************************************************")
     print(f"Processing {index+1}/{len(collections)}: {collection} ...")
@@ -21,6 +23,8 @@ for index, collection in enumerate(collections):
         os.makedirs(out_dir)
 
     cols = leafmap.maxar_child_collections(collection)
+    count = datasets[datasets['dataset']==collection]['count'].item()
+    print(f"Total number of images before: {count}")
 
     # Generate individual GeoJSON files for each collection
     for i, col in enumerate(cols):
@@ -34,10 +38,13 @@ for index, collection in enumerate(collections):
 
     # Merge all GeoJSON files into one GeoJSON file
     merged = f"datasets/{collection}.geojson"
-    files = leafmap.find_files(out_dir, ext='geojson')
-    gdfs = [gpd.read_file(file) for file in files]
-    merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True))
-    merged_gdf.to_file(merged, driver="GeoJSON")
+    gdf = gpd.read_file(merged)
+    print(f"Total number of images after: {len(gdf)}")
+    if len(gdf) != count:
+        files = leafmap.find_files(out_dir, ext='geojson')
+        gdfs = [gpd.read_file(file) for file in files]
+        merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True))
+        merged_gdf.to_file(merged, driver="GeoJSON")
 
     # Create MosaicJSON for each tile
     files = leafmap.find_files(out_dir, ext='geojson')
@@ -55,6 +62,7 @@ for index, collection in enumerate(collections):
         out_tsv = file.replace('.geojson', '.tsv')
         gdf = gpd.read_file(file)
         df = leafmap.gdf_to_df(gdf)
+        df.sort_values(by=['datetime', 'quadkey'], ascending=True, inplace=True)
         df.to_csv(out_tsv, sep='\t', index=False)
 
 # Create a CSV file for all events
@@ -66,5 +74,6 @@ for file in files:
     ids.append(file.split('/')[1].replace('.tsv', ''))
     nums.append(len(df))
 df = pd.DataFrame({'dataset': ids, 'count': nums})
+df.sort_values(by=['dataset'], ascending=True, inplace=True)
 df.to_csv('datasets.csv', index=False)
     
