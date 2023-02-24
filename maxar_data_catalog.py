@@ -23,7 +23,7 @@ for index, collection in enumerate(collections):
         os.makedirs(out_dir)
 
     cols = leafmap.maxar_child_collections(collection)
-    count = datasets[datasets['dataset']==collection]['count'].item()
+    count = datasets[datasets['dataset'] == collection]['count'].item()
     print(f"Total number of images before: {count}")
 
     # Generate individual GeoJSON files for each collection
@@ -43,7 +43,9 @@ for index, collection in enumerate(collections):
     if len(gdf) != count:
         files = leafmap.find_files(out_dir, ext='geojson')
         gdfs = [gpd.read_file(file) for file in files]
-        merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True)).drop(['proj:geometry'], axis=1)
+        merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True)).drop(
+            ['proj:geometry'], axis=1
+        )
         merged_gdf.to_file(merged, driver="GeoJSON")
 
     # Create MosaicJSON for each tile
@@ -55,7 +57,7 @@ for index, collection in enumerate(collections):
             gdf = gpd.read_file(file)
             images = gdf['visual'].tolist()
             leafmap.create_mosaicjson(images, out_json)
-    
+
     # Create TSV file for each event
     files = leafmap.find_files('datasets', ext='geojson')
     for file in files:
@@ -76,4 +78,3 @@ for file in files:
 df = pd.DataFrame({'dataset': ids, 'count': nums})
 df.sort_values(by=['dataset'], ascending=True, inplace=True)
 df.to_csv('datasets.csv', index=False)
-    
