@@ -24,7 +24,6 @@ for index, collection in enumerate(collections):
 
     cols = leafmap.maxar_child_collections(collection)
     count = datasets[datasets['dataset'] == collection]['count'].item()
-    print(f"Total number of images before: {count}")
 
     # Generate individual GeoJSON files for each collection
     for i, col in enumerate(cols):
@@ -39,13 +38,18 @@ for index, collection in enumerate(collections):
     # Merge all GeoJSON files into one GeoJSON file
     merged = f"datasets/{collection}.geojson"
     gdf = gpd.read_file(merged)
-    print(f"Total number of images after: {len(gdf)}")
-    if len(gdf) != count:
-        files = leafmap.find_files(out_dir, ext='geojson')
-        gdfs = [gpd.read_file(file) for file in files]
-        merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True)).drop(
-            ['proj:geometry'], axis=1
-        )
+
+    files = leafmap.find_files(out_dir, ext='geojson')
+    gdfs = [gpd.read_file(file) for file in files]
+    merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True)).drop(
+        ['proj:geometry'], axis=1
+    )
+    
+    print(f"Total number of images before: {count}")
+    print(f"Total number of images after: {len(merged_gdf)}")
+
+    if len(gdf) != len(merged_gdf):
+        merged_gdf.sort_values(by=['datetime', 'quadkey'], ascending=True, inplace=True)
         merged_gdf.to_file(merged, driver="GeoJSON")
 
     # Create MosaicJSON for each tile
