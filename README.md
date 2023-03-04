@@ -2,8 +2,10 @@
 
 ## Introduction
 
+[![image](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/giswqs/maxar-open-data/blob/master/examples/turkey_earthquake.ipynb)
+[![image](https://img.shields.io/badge/Open-Planetary%20Computer-black?style=flat&logo=microsoft)](https://pccompute.westeurope.cloudapp.azure.com/compute/hub/user-redirect/git-pull?repo=https://github.com/giswqs/maxar-open-data&urlpath=lab/tree/maxar-open-data/examples/turkey_earthquake&branch=master)
 [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/giswqs/maxar-open-data/blob/master/examples/turkey_earthquake.ipynb)
-[![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/giswqs/maxar-open-data/blob/master/examples/turkey_earthquake.ipynb)
+[![image](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/giswqs/maxar-open-data/master?urlpath=lab%2Ftree%2Fexamples)
 
 The [Maxar Open Data Program](https://www.maxar.com/open-data) provides pre- and post-event high-resolution satellite imagery in support of emergency planning, risk assessment, monitoring of staging areas and emergency response, damage assessment, and recovery. Check out the links below for more information.
 
