@@ -4,8 +4,8 @@ import leafmap.foliumap as leafmap
 
 st.set_page_config(layout="wide")
 
-url = 'https://giswqs.github.io/maxar-open-data'
-repo = 'https://github.com/giswqs/maxar-open-data/blob/master/datasets'
+url = 'https://opengeos.github.io/maxar-open-data'
+repo = 'https://github.com/opengeos/maxar-open-data/blob/master/datasets'
 m = leafmap.Map()
 
 
@@ -61,9 +61,9 @@ m
 
     st.info('About')
     markdown = f"""
-    - [Web App Source Code](https://github.com/giswqs/maxar-open-data/blob/master/streamlit_app.py)
-    - [GitHub Repo](https://github.com/giswqs/maxar-open-data)
-    - [Notebook Example](https://github.com/giswqs/maxar-open-data/blob/master/examples/maxar_open_data.ipynb)
+    - [Web App Source Code](https://github.com/opengeos/maxar-open-data/blob/master/streamlit_app.py)
+    - [GitHub Repo](https://github.com/opengeos/maxar-open-data)
+    - [Notebook Example](https://github.com/opengeos/maxar-open-data/blob/master/examples/maxar_open_data.ipynb)
     - [Maxar Open Data Program](https://www.maxar.com/open-data)
     - [Maxar Open Data on AWS](https://registry.opendata.aws/maxar-open-data/)
     - [Maxar Open Data on STAC Index](https://stacindex.org/catalogs/maxar-open-data-catalog-ard-format#/)
