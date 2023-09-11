@@ -4,19 +4,19 @@ import leafmap.foliumap as leafmap
 
 st.set_page_config(layout="wide")
 
-url = 'https://opengeos.github.io/maxar-open-data'
+url = 'https://open.gishub.org/maxar-open-data'
 repo = 'https://github.com/opengeos/maxar-open-data/blob/master/datasets'
 m = leafmap.Map()
 
 
-@st.cache
+@st.cache_data
 def get_datasets():
     datasets = f'{url}/datasets.csv'
     df = pd.read_csv(datasets)
     return df
 
 
-@st.cache
+@st.cache_data
 def get_catalogs(name):
     dataset = f'{url}/datasets/{name}.tsv'
 
