@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import leafmap.foliumap as leafmap
@@ -6,7 +7,11 @@ st.set_page_config(layout="wide")
 
 url = 'https://open.gishub.org/maxar-open-data'
 repo = 'https://github.com/opengeos/maxar-open-data/blob/master/datasets'
+
+os.environ['GOOGLE_MAPS_API_KEY'] = 'API-KEY'
 m = leafmap.Map()
+m.add_basemap('HYBRID')
+m.add_basemap('ROADMAP')
 
 
 @st.cache_data
@@ -30,10 +35,10 @@ st.title('Visualizing Maxar Open Data')
 col1, col2 = st.columns([1.2, 3.8])
 
 with col1:
-    default = 'Kahramanmaras-turkey-earthquake-23'
+    default = 'Morocco-Earthquake-Sept-2023'
     datasets = get_datasets()['dataset'].tolist()
     dataset = st.selectbox('Select a dataset', datasets, index=datasets.index(default))
-    catalog = st.selectbox('Select a COG mosaic', get_catalogs(dataset))
+    catalog = st.selectbox('Select a COG mosaic', get_catalogs(dataset), index=get_catalogs(dataset).index('10300500E4F91900'))
     geojson = f'{url}/datasets/{dataset}.geojson'
     mosaic = f'{url}/datasets/{dataset}/{catalog}.json'
     tsv = f'{repo}/{dataset}/{catalog}.tsv'
