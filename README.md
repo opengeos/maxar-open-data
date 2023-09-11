@@ -34,7 +34,7 @@ m
 
 ```python
 m = leafmap.Map()
-url = 'https://opengeos.github.io/maxar-open-data/datasets/Kahramanmaras-turkey-earthquake-23/1050050044DE7E00.json'
+url = 'https://open.gishub.org/maxar-open-data/datasets/Kahramanmaras-turkey-earthquake-23/1050050044DE7E00.json'
 m.add_stac_layer(url, name="Mosaic")
 m
 ```
