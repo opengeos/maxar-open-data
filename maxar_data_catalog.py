@@ -6,6 +6,7 @@ import geopandas as gpd
 import pandas as pd
 from pystac import Catalog
 
+# stac-browser: https://bit.ly/3sTkrWm
 url = "https://maxar-opendata.s3.amazonaws.com/events/catalog.json"
 root_catalog = Catalog.from_file(url)
 collections = root_catalog.get_collections()
@@ -44,7 +45,10 @@ for index, collection in enumerate(collections):
 
     # Merge all GeoJSON files into one GeoJSON file
     merged = f"datasets/{collection}.geojson"
-    gdf = gpd.read_file(merged)
+    if os.path.exists(merged):
+        gdf = gpd.read_file(merged)
+    else:
+        gdf = gpd.GeoDataFrame()
 
     files = leafmap.find_files(out_dir, ext='geojson')
     gdfs = [gpd.read_file(file) for file in files]
