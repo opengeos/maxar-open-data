@@ -10,7 +10,7 @@ repo = 'https://github.com/opengeos/maxar-open-data/blob/master/datasets'
 
 os.environ['GOOGLE_MAPS_API_KEY'] = 'API-KEY'
 m = leafmap.Map()
-m.add_basemap('HYBRID')
+m.add_basemap('SATELLITE')
 m.add_basemap('ROADMAP')
 
 
