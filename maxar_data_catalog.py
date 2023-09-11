@@ -4,8 +4,12 @@ import geojson
 import leafmap
 import geopandas as gpd
 import pandas as pd
+from pystac import Catalog
 
-collections = leafmap.maxar_collections()
+url = "https://maxar-opendata.s3.amazonaws.com/events/catalog.json"
+root_catalog = Catalog.from_file(url)
+collections = root_catalog.get_collections()
+collections = [collection.id for collection in collections]
 
 datasets = pd.read_csv('datasets.csv')
 
