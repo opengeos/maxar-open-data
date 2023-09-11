@@ -27,7 +27,10 @@ for index, collection in enumerate(collections):
         os.makedirs(out_dir)
 
     cols = leafmap.maxar_child_collections(collection)
-    count = datasets[datasets['dataset'] == collection]['count'].item()
+    if collection in datasets['dataset'].tolist():
+        count = datasets[datasets['dataset'] == collection]['count'].item()
+    else:
+        count = 0
 
     # Generate individual GeoJSON files for each collection
     for i, col in enumerate(cols):
