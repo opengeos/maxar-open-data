@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "datetime": "2021-12-27T11:10:36Z", "platform": "WV02", "gsd": 0.57, "ard_metadata_version": "0.0.1", "catalog_id": "10300100CB8C5600", "utm_zone": 29, "quadkey": "120202020111", "view:off_nadir": 26.9, "view:azimuth": 66.4, "view:incidence_angle": 59.6, "view:sun_azimuth": 156.9, "view:sun_elevation": 32.2, "proj:epsg": 32629, "proj:geometry": { "type": "Polygon", "coordinates": [ [ [ 540156.25, 3440156.25 ], [ 540156.25, 3436625.3852081406 ], [ 538792.8143552986, 3437004.292464861 ], [ 536400.230289138, 3440156.25 ], [ 540156.25, 3440156.25 ] ] ] }, "grid:code": "MXRA-Z29-120202020111", "proj:bbox": "536400.230289138,3436625.3852081406,540156.25,3440156.25", "tile:data_area": 8.3, "tile:clouds_area": 0.0, "tile:clouds_percent": 0, "visual": "https://maxar-opendata.s3.amazonaws.com/events/Morocco-Earthquake-Sept-2023/ard/29/120202020111/2021-12-27/10300100CB8C5600-visual.tif" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -8.578952014151099, 31.094545691913513 ], [ -8.579092367833271, 31.062683684902417 ], [ -8.59336874, 31.06615184 ], [ -8.618343368969184, 31.094665835648062 ], [ -8.578952014151099, 31.094545691913513 ] ] ] } }
+]
+}
