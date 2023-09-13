@@ -5,6 +5,7 @@ import leafmap
 import geopandas as gpd
 import pandas as pd
 from pystac import Catalog
+from shapely.ops import unary_union
 
 # stac-browser: https://bit.ly/3sTkrWm
 url = "https://maxar-opendata.s3.amazonaws.com/events/catalog.json"
@@ -13,6 +14,28 @@ collections = root_catalog.get_collections()
 collections = [collection.id for collection in collections]
 
 datasets = pd.read_csv('datasets.csv')
+
+def union_geojson_with_attributes(input_file):
+    # Read the input GeoJSON file
+    output_file = input_file.replace('.geojson', '_union.geojson')
+    data = gpd.read_file(input_file)
+
+    # Perform the union operation on all polygons
+    union_polygon = unary_union(data['geometry'])
+
+    # Create a new GeoDataFrame with the unioned geometry
+    union_gdf = gpd.GeoDataFrame(geometry=[union_polygon])
+
+    columns = data.columns.tolist()
+    columns.remove('geometry')
+
+    # Copy attributes from the first row of the input GeoDataFrame
+    for column in columns:
+        union_gdf[column] = data.iloc[0][column]
+
+    # Save the GeoDataFrame with unioned geometry and attributes as a new GeoJSON file
+    union_gdf.to_file(output_file, driver='GeoJSON')
+
 
 for index, collection in enumerate(collections):
     print("*****************************************************************")
@@ -42,15 +65,18 @@ for index, collection in enumerate(collections):
                 collection, col, return_gdf=True, assets=['visual']
             )
             gdf.to_file(output, driver="GeoJSON")
+        union_geojson_with_attributes(output)
 
     # Merge all GeoJSON files into one GeoJSON file
     merged = f"datasets/{collection}.geojson"
+    merged_union = f"datasets/{collection}_union.geojson"
     if os.path.exists(merged):
         gdf = gpd.read_file(merged)
     else:
         gdf = gpd.GeoDataFrame()
 
     files = leafmap.find_files(out_dir, ext='geojson')
+    files = [file for file in files if 'union' not in file]
     gdfs = [gpd.read_file(file) for file in files]
     merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True)).drop(
         ['proj:geometry'], axis=1
@@ -63,8 +89,17 @@ for index, collection in enumerate(collections):
         merged_gdf.sort_values(by=['datetime', 'quadkey'], ascending=True, inplace=True)
         merged_gdf.to_file(merged, driver="GeoJSON")
 
+    files = leafmap.find_files(out_dir, ext='geojson')
+    files = [file for file in files if 'union' in file]
+    gdfs = [gpd.read_file(file) for file in files]
+    merged_gdf = gpd.GeoDataFrame(pd.concat(gdfs, ignore_index=True)).drop(
+        ['proj:geometry'], axis=1
+    )
+    merged_gdf.to_file(merged_union, driver="GeoJSON")
+
     # Create MosaicJSON for each tile
     files = leafmap.find_files(out_dir, ext='geojson')
+    files = [file for file in files if 'union' not in file]
     for file in files:
         out_json = file.replace('.geojson', '.json')
         if not os.path.exists(out_json):
@@ -74,7 +109,8 @@ for index, collection in enumerate(collections):
             leafmap.create_mosaicjson(images, out_json)
 
     # Create TSV file for each event
-    files = leafmap.find_files('datasets', ext='geojson')
+    files = leafmap.find_files('datasets', ext='geojson',  recursive=False)
+    files = [file for file in files if 'union' not in file]
     for file in files:
         out_tsv = file.replace('.geojson', '.tsv')
         gdf = gpd.read_file(file)
