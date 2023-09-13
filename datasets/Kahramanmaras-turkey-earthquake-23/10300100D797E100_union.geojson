@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "datetime": "2022-07-26T08:19:46Z", "platform": "WV02", "gsd": 0.54, "ard_metadata_version": "0.0.1", "catalog_id": "10300100D797E100", "utm_zone": 37, "quadkey": "031131233232", "view:off_nadir": 23.2, "view:azimuth": 143.9, "view:incidence_angle": 63.7, "view:sun_azimuth": 130.7, "view:sun_elevation": 65.1, "proj:epsg": 32637, "proj:geometry": null, "grid:code": "MXRA-Z37-031131233232", "proj:bbox": "314738.45123535924,4159843.75,315156.25,4163164.227738629", "tile:data_area": 1.2, "tile:clouds_area": 0.0, "tile:clouds_percent": 0, "visual": "https://maxar-opendata.s3.amazonaws.com/events/Kahramanmaras-turkey-earthquake-23/ard/37/031131233232/2022-07-26/10300100D797E100-visual.tif" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 36.958307, 37.567990137692078 ], [ 36.958307, 37.557316 ], [ 36.907292216039487, 37.557316 ], [ 36.903754658375604, 37.557316 ], [ 36.902291, 37.557316 ], [ 36.902291, 37.567007810502737 ], [ 36.902291, 37.56982407677873 ], [ 36.902291, 37.596933 ], [ 36.902643199373863, 37.596933 ], [ 36.906182634856506, 37.596933 ], [ 36.958307, 37.596933 ], [ 36.958307, 37.570806428450304 ], [ 36.958307, 37.567990137692078 ] ] ] } }
+]
+}
