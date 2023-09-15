@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "datetime": "2023-09-14T09:18:08Z", "platform": "WV02", "gsd": 0.49, "ard_metadata_version": "0.0.1", "catalog_id": "10300100ED0AD100", "utm_zone": 34, "quadkey": "120200210222", "view:off_nadir": 15.0, "view:azimuth": 145.7, "view:incidence_angle": 73.1, "view:sun_azimuth": 147.2, "view:sun_elevation": 56.5, "proj:epsg": 32634, "proj:geometry": null, "grid:code": "MXRA-Z34-120200210222", "proj:bbox": "580363.0975596167,3639843.75,585156.25,3641455.3540173345", "tile:data_area": 7.6, "tile:clouds_area": 0.0, "tile:clouds_percent": 0, "visual": "https://maxar-opendata.s3.amazonaws.com/events/Libya-Floods-Sept-2023/ard/34/120200210222/2023-09-14/10300100ED0AD100-visual.tif" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 22.040134, 32.858982 ], [ 22.017002910898864, 32.859766602051579 ], [ 21.9635860720756, 32.861578490853979 ], [ 21.90682792213164, 32.863503716280903 ], [ 21.858824, 32.865132 ], [ 21.859271958046641, 32.896643278330181 ], [ 21.859434, 32.908042 ], [ 21.907281255062593, 32.907988778171891 ], [ 21.960746374491467, 32.90792930743752 ], [ 21.974508, 32.907914 ], [ 22.014233735609775, 32.90985620640091 ], [ 22.039981, 32.911115 ], [ 22.040027500248417, 32.895270572217548 ], [ 22.040134, 32.858982 ] ] ] } }
+]
+}
