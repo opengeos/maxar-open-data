@@ -61,7 +61,7 @@ for index, collection in enumerate(collections):
     for i, col in enumerate(cols):
         print(f"Processing {i+1}/{len(cols)}: {col} ...")
         output = f"datasets/{collection}/{col}.geojson"
-        if os.path.exists(output):
+        if not os.path.exists(output):
             gdf = leafmap.maxar_items(
                 collection,
                 col,
