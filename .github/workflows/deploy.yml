@@ -10,7 +10,7 @@ on:
       - master
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
-  build-and-deploy-book:
+  build-and-deploy:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
