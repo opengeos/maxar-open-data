@@ -1,3 +1,4 @@
 cogeo-mosaic
 geopandas
 leafmap
+setuptools
