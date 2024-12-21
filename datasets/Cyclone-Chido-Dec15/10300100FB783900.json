@@ -1,0 +1,1 @@
+{"mosaicjson":"0.0.3","version":"1.0.0","minzoom":12,"maxzoom":19,"quadkey_zoom":12,"bounds":[43.25499246161066,-11.75623338579224,43.304021990326056,-11.707917979179607],"center":[43.27950722596836,-11.732075682485924,12],"tiles":{"300131101320":["https://maxar-opendata.s3.amazonaws.com/events/Cyclone-Chido-Dec15/ard/38/211311011032/2024-05-23/10300100FB783900-visual.tif"]}}
