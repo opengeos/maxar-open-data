@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "1030010109A55E00",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "datetime": "2024-11-22T07:22:11Z", "platform": "WV02", "gsd": 0.65, "ard_metadata_version": "0.0.1", "catalog_id": "1030010109A55E00", "utm_zone": 37, "quadkey": "300200122223", "view:off_nadir": 32.8, "view:azimuth": 151.7, "view:incidence_angle": 52.6, "view:sun_azimuth": 110.1, "view:sun_elevation": 64.6, "proj:epsg": 32737, "proj:geometry": { "type": "Polygon", "coordinates": [ [ [ 664843.75, 8565156.25 ], [ 664843.75, 8559843.75 ], [ 670156.25, 8559843.75 ], [ 670156.25, 8565156.25 ], [ 664843.75, 8565156.25 ] ] ] }, "grid:code": "MXRA-Z37-300200122223", "proj:bbox": "664843.75,8559843.75,670156.25,8565156.25", "tile:data_area": 28.2, "tile:clouds_area": 1.3, "tile:clouds_percent": 4, "visual": "https://maxar-opendata.s3.amazonaws.com/events/Cyclone-Chido-Dec15/ard/37/300200122223/2024-11-22/1030010109A55E00-visual.tif", "ms_analytic": "https://maxar-opendata.s3.amazonaws.com/events/Cyclone-Chido-Dec15/ard/37/300200122223/2024-11-22/1030010109A55E00-ms.tif", "pan_analytic": "https://maxar-opendata.s3.amazonaws.com/events/Cyclone-Chido-Dec15/ard/37/300200122223/2024-11-22/1030010109A55E00-pan.tif", "data-mask": "https://maxar-opendata.s3.amazonaws.com/events/Cyclone-Chido-Dec15/ard/37/300200122223/2024-11-22/1030010109A55E00-data-mask.gpkg" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 40.519804409074837, -12.97483473515592 ], [ 40.520096695714344, -13.022857167229548 ], [ 40.569072852997408, -13.022565379095083 ], [ 40.568771158411977, -12.974544059328759 ], [ 40.519804409074837, -12.97483473515592 ] ] ] } }
+]
+}
